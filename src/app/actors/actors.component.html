@@ -1,9 +1,4 @@
 <div *ngFor="let actor of actors">
-  <h2>{{actor.name}}</h2>
-  <ul>
-    <li *ngFor="let movie of actor.movies">
-      <a href="{{movie.trailerURL}}">{{movie.name}}</a>
-    </li>
-  </ul>
+  <a routerLink="/detail/{{actor.id}}"><h3>{{actor.name}}</h3></a>
 </div>
 

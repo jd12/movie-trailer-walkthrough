@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AVENGERS_ACTORS } from './mock-actors';
+import { Actor } from './actor';
+import { ActorService } from '../actor.service';
 
 @Component({
   selector: 'app-actors',
@@ -8,12 +9,17 @@ import { AVENGERS_ACTORS } from './mock-actors';
   styleUrls: ['./actors.component.css']
 })
 export class ActorsComponent implements OnInit {
-  
-  actors = AVENGERS_ACTORS;
 
-  constructor() { }
+  actors: Actor[];
+
+  constructor(private actorService: ActorService) { }
 
   ngOnInit() {
+    this.getActors();
+  }
+
+  getActors(): void {
+    this.actors = this.actorService.getActors();
   }
 
 }
