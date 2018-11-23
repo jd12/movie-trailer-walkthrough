@@ -12,6 +12,7 @@ import { ActorService } from '../actor.service';
 export class ActorDetailComponent implements OnInit {
 
   actor: Actor;
+  
   constructor(
     private actorService: ActorService,
      private route: ActivatedRoute,
@@ -25,5 +26,4 @@ export class ActorDetailComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.actor = this.actorService.getActor(id);
   }
-
 }

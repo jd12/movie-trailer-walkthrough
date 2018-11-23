@@ -7,8 +7,7 @@ import { ActorDetailComponent } from './actor-detail/actor-detail.component';
 
 const routes: Routes = [
   { path: '', component: ActorsComponent },
-  { path: 'detail/:id', component: ActorDetailComponent },
-
+  { path: 'detail/:id', component: ActorDetailComponent }
 ];
 
 @NgModule({
@@ -19,9 +18,4 @@ const routes: Routes = [
   exports: [RouterModule],
   declarations: []
 })
-export class AppRoutingModule {
-
-  
-
-
-}
+export class AppRoutingModule {}
